@@ -1,0 +1,27 @@
+-myux
+-i client.ihx
+-Y
+-v 0x1f00
+-w 0x20000
+-b HOME = 0x0000
+-b XSEG = 0xe000
+-b PSEG = 0xe000
+-b ISEG = 0x0000
+-b BSEG = 0x0000
+-bBANK1=0x018000
+-r
+-bBANK2=0x028000
+-bBANK3=0x038000
+-k /usr/local/bin/../share/sdcc/lib/huge-stack-auto
+-k /usr/local/share/sdcc/lib/huge-stack-auto
+-l libsdcc.lib
+-l contiki-sensinode.lib
+-l mcs51
+-l libsdcc
+-l libint
+-l liblong
+-l libfloat
+obj_sensinode/contiki-sensinode-main.rel
+obj_sensinode/client.app.rel
+
+-e
